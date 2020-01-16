@@ -1,0 +1,18 @@
+    ErrorDocument 404 /404.php
+    <IfModule mod_rewrite.c>
+    # Force Https
+    #RewriteEngine On
+    #RewriteCond %{HTTPS} !=on
+    #RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+    RewriteEngine On
+    RewriteCond %{SCRIPT_FILENAME} !-f
+    RewriteCond %{SCRIPT_FILENAME} !-d
+	RewriteRule ^(login)$ auth/index.php?url=$1 [NC,L]
+
+	RewriteRule ^(join)/([a-zA-Z0-9._-]+)$ auth/index.php?url=$1&ref=$2 [NC,L]
+    RewriteRule ^(join)$ auth/index.php?url=$1 [NC,L]
+    RewriteRule ^(logout)$ auth/index.php?url=$1 [NC,L]
+	RewriteRule ^developer$ https://ikelvin.co [NC,L]
+    RewriteCond %{REQUEST_FILENAME}.php -f
+    RewriteRule !.*\.php$ %{REQUEST_FILENAME}.php [L,QSA]
+	</IfModule>
