@@ -17,6 +17,10 @@ $recharge_tb = DB::fetch($recharge_sql);
 }
 
 $acc_no = DB::count($acc_no_sql);
+if ($acc_no > 0) {
+    $acc_tb = DB::fetch($acc_no_sql);
+}
+
 $priv_level = DB::fetch($priv_level_sql)[0][0];
 
 ?>

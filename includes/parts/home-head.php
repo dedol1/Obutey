@@ -1,7 +1,7 @@
 
 
   <head>
-<title>Online Recharge a Corporate Category Bootstrap Responsive Web Template | index :: w3layouts</title>
+<title>Online Recharge | Obutey :: PrePaid System</title>
 <link href="../static/vendorhome/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" /><!-- bootstrap-CSS -->
 <link rel="stylesheet" href="../static/vendorhome/css/bootstrap-select.css"><!-- bootstrap-select-CSS -->
 <link href="../static/vendorhome/css/font-awesome.css" rel="stylesheet" type="text/css" media="all" /><!-- Fontawesome-CSS -->

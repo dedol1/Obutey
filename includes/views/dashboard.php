@@ -180,19 +180,19 @@ require ('../includes/models/dashboard.php');
                                             </thead>
                                             <tbody><?php
                                             
-                                            if($recharge_no > 0){
-                                                $count = $recharge_no;
+                                            if($acc_no > 0){
+                                                $count = $acc_no;
                                                 $counter = 0;
 
 while($counter < $count){ 
 
-//$referee_id = $recharge_tb[$counter]['referee'];
+//$referee_id = $acc_tb[$counter]['referee'];
 // print_r($referee_id);
-$recharge_id = $recharge_tb[$counter]['id'];
-$recharge_status = $recharge_tb[$counter]['status'];
-$recharge_date = $recharge_tb[$counter]['req_date'];
-$recharge_user = $recharge_tb[$counter]['username'];
-$recharge_meter = $recharge_tb[$counter]['meter_no'];
+$acc_id = $acc_tb[$counter]['id'];
+$acc_status = $acc_tb[$counter]['status'];
+$acc_date = $acc_tb[$counter]['reg_date'];
+$acc_user = $acc_tb[$counter]['username'];
+$acc_meter = $acc_tb[$counter]['meter_no'];
 
 
 
@@ -204,7 +204,7 @@ $recharge_meter = $recharge_tb[$counter]['meter_no'];
                                 <div class="btn-group dropup">
                                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><i class="fa fa-edit"></i>&nbsp;&nbsp; Confirm <span class="caret"></span></button>
                                     <ul class="dropdown-menu" role="menu">
-                                        <li><a class="approve_data" id="<?= $boomer_id ?>" req= "<?= $recharge_id ?>"><i class="fa fa-lock"></i>&nbsp;&nbsp; Approve</a>
+                                        <li><a class="approve_data" id="<?= $boomer_id ?>" req= "<?= $acc_id ?>"><i class="fa fa-lock"></i>&nbsp;&nbsp; Approve</a>
                                     
                                     </li>
                                        
@@ -217,9 +217,9 @@ $recharge_meter = $recharge_tb[$counter]['meter_no'];
                              
                                 </td>
                                                    
-                                                    <td><?= $recharge_meter.' / '.$recharge_user.' <br/><a class="view_data" id="'.$recharge_id.'" paydir = "1"><i class="fa fa-fw fa-money"></i> Details</a>'; ?></td>
-                                                     <td><?= $recharge_date ?></td>
-                                                    <td>1 Set - <?= $recharge_status ?></td>
+                                                    <td><?= $acc_meter.' / '.$acc_user.' <br/><a class="view_data" id="'.$acc_id.'" paydir = "1"><i class="fa fa-fw fa-money"></i> Details</a>'; ?></td>
+                                                     <td><?= $acc_date ?></td>
+                                                    <td>1 Set - <?= $acc_status ?></td>
                                                 </tr>
 
 <?php
@@ -292,12 +292,12 @@ $counter++; }
 
                                                         while($counter < $count){ 
 
-                                                    // $admin_id = $admins[$counter]['id'];
+                                                    // $acc_id = $admins[$counter]['id'];
 // print_r($referee_id);
-                                                $admin_status = $admins[$counter]['status'];
+                                                $acc_status = $admins[$counter]['status'];
 
                                                 
-                                                $admin_uname = $admins[$counter]['username'];
+                                                $acc_uname = $admins[$counter]['username'];
                                               
                                                             ?>
                                                             <tr>
@@ -307,7 +307,7 @@ $counter++; }
                                          <span class="fa fa-fw fa-circle text-primary"></span>
                                        
 
-                                        <?= $admin_uname ?> <a href="" class="badge bg-primary"> <i class="fa fa-fw fa-check text-primary"></i> <?= $admin_status ?> </a>
+                                        <?= $acc_uname ?> <a href="" class="badge bg-primary"> <i class="fa fa-fw fa-check text-primary"></i> <?= $acc_status ?> </a>
 
                                         
                                      </td>

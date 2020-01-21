@@ -8,7 +8,7 @@ require ('../includes/classes/data.php');
 require ('../includes/classes/img.php');
 require ('../includes/model.php');
 
-$viewName = ($viewName == "index") ? "store" : $viewName ;
+$viewName = ($viewName == "index") ? "app" : $viewName ;
 // echo 'hey '.$viewName;
 
 if (file_exists('../includes/views/'.$viewName.'.php'))
@@ -20,15 +20,15 @@ if (file_exists('../includes/views/'.$viewName.'.php'))
           <html lang="en">';
           
           // self::show("head");
-          require_once("../includes/parts/store-head.php");
-          echo '<body class="animsition">
+          require_once("../includes/parts/app-head.php");
+          echo '<body>
           ';
           
-          require_once("../includes/parts/store-cart.php");
+          // require_once("../includes/parts/store-cart.php");
           // self::show("header");
-          require_once("../includes/parts/store-header.php");
+          require_once("../includes/parts/app-header.php");
           // self::show("sidebar");
-          require_once("../includes/parts/sidebar.php");
+          // require_once("../includes/parts/sidebar.php");
 
           echo'</nav>';
           require_once("../includes/views/$viewName.php");
@@ -49,8 +49,8 @@ if (file_exists('../includes/views/'.$viewName.'.php'))
 		</span>
 	</div>
           <?php
-          require_once("../includes/parts/store-modals.php");
-          require_once("../includes/parts/store-scripts.php");
+          // require_once("../includes/parts/app-modals.php");
+          require_once("../includes/parts/app-scripts.php");
 
           // if ($refpage_url == "https://boomersclub.net/login" or $refpage_url =="https://beta.boomersclub.net/login" or $refpage_url == "http://localhost/boomers/login")
             
@@ -75,13 +75,10 @@ if (file_exists('../includes/views/'.$viewName.'.php'))
           echo'</body></html>';
           //parts::show("payload");
        
-        
-
       } else {
         // echo "404 Created!";
       require_once("../includes/views/model404.php");
       die();
-
       } 
 
 //parts::show("head");
